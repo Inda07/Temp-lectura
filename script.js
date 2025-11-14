@@ -1,4 +1,4 @@
-    const minutesInput = document.getElementById("minutes");
+       const minutesInput = document.getElementById("minutes");
     const timeDisplay = document.getElementById("time-display");
     const statusText = document.getElementById("status-text");
 
@@ -31,20 +31,20 @@
         video: "https://www.youtube.com/watch?v=VUL8PQETF0A"
       },
       celtica: {
-        name: "Celta Fantasía",
+        name: "Fantasia",
         video: "https://www.youtube.com/watch?v=DhAJBJnIPr8"
       },
       jazz: {
         name: "Jazz",
         video: "https://www.youtube.com/watch?v=MYPVQccHhAQ"
       },
-      clasica: {
-        name: "Clásica",
-        video: "https://www.youtube.com/watch?v=mIYzp5rcTvU"
+      hoguera: {
+        name: "Hoguera",
+        video: "https://www.youtube.com/watch?v=lGphuanCRDk"
       },
       anime: {
         name: "Anime",
-        video: "https://www.youtube.com/watch?v=fX7k3W-2BMM"
+        video: "https://www.youtube.com/watch?v=oCV-C8_VFdk"
       }
     };
 
@@ -81,7 +81,7 @@
       const normalized = normalizeVideoUrl(baseUrl.trim());
       if (!normalized) return "";
       const separator = normalized.includes("?") ? "&" : "?";
-      return `${normalized}${separator}autoplay=1&mute=1`;
+      return `${normalized}${separator}autoplay=1`;
     }
 
     function stopVideo() {
@@ -229,12 +229,16 @@
 
     modeInputs.forEach((input) => {
       input.addEventListener("change", () => {
-        if (!hasLaunchedMedia) {
-          const mode = readingModes[input.value];
-          if (mode) {
-            setModeIndicator(`Modo ${mode.name} listo. Pulsa empezar.`, false);
-          }
+        const mode = readingModes[input.value];
+        if (!mode) return;
+
+        if (hasLaunchedMedia) {
+          stopVideo();
+          hasLaunchedMedia = false;
+          activeModeName = "";
         }
+
+        setModeIndicator(`Modo ${mode.name} listo. Pulsa empezar.`, false);
       });
     });
 
