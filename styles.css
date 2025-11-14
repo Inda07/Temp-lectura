@@ -12,7 +12,7 @@
       align-items: center;
       justify-content: center;
 
-      background-image: url("estrellas.jpg");
+      background-image: url("oleo.png");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -490,4 +490,5 @@ body::before {
       font-size: 0.76rem;
       color: #cbd5e1;
     }
+
 
