@@ -27,8 +27,24 @@
         video: "https://www.youtube.com/watch?v=dcwB95o3UdA&t=3563s"
       },
       sad: {
-        name: "Sad",
+        name: "Lluvia",
         video: "https://www.youtube.com/watch?v=VUL8PQETF0A"
+      },
+      celtica: {
+        name: "Celta Fantasía",
+        video: "https://www.youtube.com/watch?v=DhAJBJnIPr8"
+      },
+      jazz: {
+        name: "Jazz",
+        video: "https://www.youtube.com/watch?v=MYPVQccHhAQ"
+      },
+      clasica: {
+        name: "Clásica",
+        video: "https://www.youtube.com/watch?v=mIYzp5rcTvU"
+      },
+      anime: {
+        name: "Anime",
+        video: "https://www.youtube.com/watch?v=fX7k3W-2BMM"
       }
     };
 
@@ -235,3 +251,4 @@
     } else {
       setModeIndicator("Elige un modo para iniciar la ambientación.", false);
     }
+
