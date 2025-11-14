@@ -1,4 +1,4 @@
-      const minutesInput = document.getElementById("minutes");
+     const minutesInput = document.getElementById("minutes");
     const timeDisplay = document.getElementById("time-display");
     const statusText = document.getElementById("status-text");
 
